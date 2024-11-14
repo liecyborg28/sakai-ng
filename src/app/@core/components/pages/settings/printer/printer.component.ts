@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { timeout } from 'rxjs';
 import { BluetoothService } from 'src/app/@core/services/@utils/bluetooth/bluetooth.service';
 
 @Component({
@@ -15,10 +16,11 @@ export class PrinterComponent implements OnInit {
     unpairedDevices: any = [];
     isConnected: any = false;
 
+    version = '0.3';
     test = 'Printer Works!';
 
     ngOnInit(): void {
-        this.listPairedDevices();
+        this.discoverUnpairedDevices();
     }
 
     testFunction() {
@@ -46,12 +48,17 @@ export class PrinterComponent implements OnInit {
     }
 
     async discoverUnpairedDevices() {
-        try {
-            this.unpairedDevices =
-                await this.bluetoothService.discoverUnpairedDevices();
-            console.log('Unpaired devices:', this.unpairedDevices);
-        } catch (error) {
-            console.error('Error discovering unpaired devices:', error);
-        }
+        this.test = 'Refresh...';
+        setTimeout(async () => {
+            try {
+                this.test = 'Sedang mencari perangkat bluetooth...';
+                this.unpairedDevices =
+                    await this.bluetoothService.discoverUnpairedDevices();
+                this.test = 'Perangkat bluetooth sudah ditemukan...';
+                console.log('Unpaired devices:', this.unpairedDevices);
+            } catch (error) {
+                console.error('Error discovering unpaired devices:', error);
+            }
+        }, 1000);
     }
 }
