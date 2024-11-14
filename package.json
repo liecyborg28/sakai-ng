@@ -8,7 +8,12 @@
         "build": "ng build",
         "test": "ng test",
         "lint": "ng lint",
-        "e2e": "ng e2e"
+        "e2e": "ng e2e",
+        "build:angular": "ng build --output-path=dist/sakai-ng --base-href ./",
+        "copy:to-cordova": "xcopy /s /e /y dist\\sakai-ng\\* cordova\\www",
+        "build:cordova": "cd cordova && cordova build android",
+        "build:all": "npm run build:angular && npm run copy:to-cordova && npm run build:cordova",
+        "build:run": "npm run build:angular && npm run copy:to-cordova && cd cordova && cordova run android"
     },
     "private": true,
     "dependencies": {
