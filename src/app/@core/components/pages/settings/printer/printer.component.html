@@ -4,3 +4,27 @@
 <p>Unpaired devices: {{unpairedDevices}}</p>
 <p>Is connected: {{isConnected}}</p>
 <p-button (click)="ngOnInit()" label="Refresh" />
+<br>
+<br>
+<p-button (click)="testConfirmDialog()" label="Buka confirm dialog" />
+<br>
+<br>
+<p-button (click)="testLoadingDialog()" label="Buka loading dialog" />
+<br>
+<br>
+<p-button (click)="testDialog()" label="Buka alert dialog" />
+<br>
+<br>
+<p-button (click)="showToast('success', 'Ini sukses', 'Ini pesan untuk toast success')" label="Buka toast success" />
+<br>
+<br>
+<p-button (click)="showToast('warning', 'Ini warning', 'Ini pesan untuk toast waning')" label="Buka toast warning" />
+<br>
+<br>
+<p-button (click)="showToast('info', 'Ini info', 'Ini pesan untuk info')" label="Buka toast info" />
+<br>
+<br>
+<p-button (click)="showToast('error', 'Ini error', 'Ini pesan untuk toast error')" label="Buka toast error" />
+<br>
+<br>
+<p-button (click)="showToast(null, 'Ini custom', 'Ini pesan untuk toast custom')" label="Buka toast custom" />

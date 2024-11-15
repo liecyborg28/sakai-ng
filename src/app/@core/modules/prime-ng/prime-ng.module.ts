@@ -1,53 +1,78 @@
 import { NgModule } from '@angular/core';
 
 // Import PrimeNG Modules
+
+// B
 import { ButtonModule } from 'primeng/button';
+
+// C
+import { CalendarModule } from 'primeng/calendar';
 import { CardModule } from 'primeng/card';
-import { TableModule } from 'primeng/table';
-import { InputTextModule } from 'primeng/inputtext';
-import { DropdownModule } from 'primeng/dropdown';
+import { CheckboxModule } from 'primeng/checkbox';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
+
+// D
 import { DialogModule } from 'primeng/dialog';
+import { DropdownModule } from 'primeng/dropdown';
+import { DynamicDialogModule } from 'primeng/dynamicdialog';
+
+// F
+import { FileUploadModule } from 'primeng/fileupload';
+
+// I
+import { InputNumberModule } from 'primeng/inputnumber';
+import { InputTextModule } from 'primeng/inputtext';
+
+// P
+import { ProgressBarModule } from 'primeng/progressbar';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
+
+// R
+import { RadioButtonModule } from 'primeng/radiobutton';
+
+// T
+import { TableModule } from 'primeng/table';
 import { ToastModule } from 'primeng/toast';
 import { ToolbarModule } from 'primeng/toolbar';
-import { CalendarModule } from 'primeng/calendar';
-import { CheckboxModule } from 'primeng/checkbox';
-import { RadioButtonModule } from 'primeng/radiobutton';
-import { ProgressBarModule } from 'primeng/progressbar';
-import { InputNumberModule } from 'primeng/inputnumber';
-import { FileUploadModule } from 'primeng/fileupload';
 
 @NgModule({
     imports: [
         ButtonModule,
+        CalendarModule,
         CardModule,
-        TableModule,
-        InputTextModule,
-        DropdownModule,
+        CheckboxModule,
+        ConfirmDialogModule,
         DialogModule,
+        DropdownModule,
+        DynamicDialogModule,
+        FileUploadModule,
+        InputNumberModule,
+        InputTextModule,
+        ProgressBarModule,
+        ProgressSpinnerModule,
+        RadioButtonModule,
+        TableModule,
         ToastModule,
         ToolbarModule,
-        CalendarModule,
-        CheckboxModule,
-        RadioButtonModule,
-        ProgressBarModule,
-        InputNumberModule,
-        FileUploadModule,
     ],
     exports: [
         ButtonModule,
+        CalendarModule,
         CardModule,
-        TableModule,
-        InputTextModule,
-        DropdownModule,
+        CheckboxModule,
+        ConfirmDialogModule,
         DialogModule,
+        DropdownModule,
+        DynamicDialogModule,
+        FileUploadModule,
+        InputNumberModule,
+        InputTextModule,
+        ProgressBarModule,
+        ProgressSpinnerModule,
+        RadioButtonModule,
+        TableModule,
         ToastModule,
         ToolbarModule,
-        CalendarModule,
-        CheckboxModule,
-        RadioButtonModule,
-        ProgressBarModule,
-        InputNumberModule,
-        FileUploadModule,
     ],
 })
 export class PrimeNgModule {}
